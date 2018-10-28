@@ -384,7 +384,9 @@ module.exports.metadata =
   "cordova-plugin-media-capture": "1.4.3",
   "cordova-plugin-dialogs": "1.3.4",
   "cordova-plugin-inappbrowser": "1.7.2",
-  "cordova-plugin-network-information": "1.3.4"
+  "cordova-plugin-network-information": "1.3.4",
+  "cordova-android-support-gradle-release": "1.4.5",
+  "cordova-plugin-crosswalk-webview": "2.4.0"
 };
 // BOTTOM OF METADATA
 });
