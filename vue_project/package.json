@@ -5,7 +5,7 @@
   "author": "xiaohua <739775705@qq.com>",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js --host 0.0.0.0",
+    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "unit": "jest --config test/unit/jest.conf.js --coverage",
     "e2e": "node test/e2e/runner.js",
@@ -14,6 +14,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "cube-ui": "^1.11.2",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },
@@ -73,7 +74,21 @@
     "webpack": "^3.6.0",
     "webpack-bundle-analyzer": "^2.9.0",
     "webpack-dev-server": "^2.9.1",
-    "webpack-merge": "^4.1.0"
+    "webpack-merge": "^4.1.0",
+    "webpack-transform-modules-plugin": "^0.3.5"
+  },
+  "transformModules": {
+    "cube-ui": {
+      "transform": "cube-ui/lib/${member}",
+      "kebabCase": true,
+      "style": {
+        "ignore": [
+          "create-api",
+          "better-scroll",
+          "locale"
+        ]
+      }
+    }
   },
   "engines": {
     "node": ">= 6.0.0",
