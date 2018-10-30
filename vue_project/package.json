@@ -15,8 +15,15 @@
   },
   "transformModules": {
     "cube-ui": {
-      "transform": "cube-ui/src/modules/${member}",
-      "kebabCase": true
+      "transform": "cube-ui/lib/${member}",
+      "kebabCase": true,
+      "style": {
+        "ignore": [
+          "create-api",
+          "better-scroll",
+          "locale"
+        ]
+      }
     }
   },
   "dependencies": {
