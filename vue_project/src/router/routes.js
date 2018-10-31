@@ -1,22 +1,22 @@
-import Index from '../pages/index/index.vue'
-import IndexView from '../pages/index/view.vue'
-import AboutIndex from '../pages/about/index.vue'
+import Example from '../pages/example/index.vue'
+import ExampleView from '../pages/example/view.vue'
+import Other from '../pages/other/index.vue'
 
 const routes = [
 
   {
-    path: '/index',
-    component: Index,
+    path: '/example',
+    component: Example,
     children: [
       {
         path: 'view',
-        component: IndexView
+        component: ExampleView
       }
     ]
   },
-  {
-    path: '/about',
-    component: AboutIndex,
+   {
+    path: '/other',
+    component: Other
   }
 ]
 
