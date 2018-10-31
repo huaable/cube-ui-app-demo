@@ -1,5 +1,6 @@
 ## Usage
 
+#### 初始化项目
 
     cd /cube-ui-app-demo
     npm install
@@ -10,7 +11,8 @@
     npm run build 
 
 
-开发流程
+#### 开发流程
+
 1.在vue_project目录里进行vue项目开发
     
      cd /cube-ui-app-demo/vue_project
@@ -36,8 +38,12 @@
      cordova platform add android
      cordova build android
 
+
+#### 其他
+
 项目开发过程中,笔记放在这里
-cd /cube-ui-app-demo/document
+
+    cd /cube-ui-app-demo/document
 
 cube-ui 网址
 https://didi.github.io/cube-ui/#/zh-CN
