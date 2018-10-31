@@ -26,6 +26,10 @@
     cordova build android
 
 
+
+    项目开发过程中,笔记放在这里
+    cd /cube-ui-app-demo/document
+
     cube-ui 网址
-	https://didi.github.io/cube-ui/#/zh-CN
+    https://didi.github.io/cube-ui/#/zh-CN
 
