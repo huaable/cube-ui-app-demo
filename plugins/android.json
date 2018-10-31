@@ -7,7 +7,16 @@
     "files": {}
   },
   "installed_plugins": {
+    "cordova-plugin-battery-status": {
+      "PACKAGE_NAME": "com.phonegap.helloworld"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.phonegap.helloworld"
+    },
     "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.phonegap.helloworld"
+    },
+    "cordova-plugin-dialogs": {
       "PACKAGE_NAME": "com.phonegap.helloworld"
     },
     "cordova-plugin-geolocation": {
@@ -16,41 +25,23 @@
     "cordova-plugin-globalization": {
       "PACKAGE_NAME": "com.phonegap.helloworld"
     },
-    "cordova-plugin-vibration": {
-      "PACKAGE_NAME": "com.phonegap.helloworld"
-    },
-    "cordova-plugin-battery-status": {
-      "PACKAGE_NAME": "com.phonegap.helloworld"
-    },
-    "cordova-plugin-camera": {
+    "cordova-plugin-inappbrowser": {
       "PACKAGE_NAME": "com.phonegap.helloworld"
     },
     "cordova-plugin-media-capture": {
       "PACKAGE_NAME": "com.phonegap.helloworld"
     },
-    "cordova-plugin-dialogs": {
-      "PACKAGE_NAME": "com.phonegap.helloworld"
-    },
-    "cordova-plugin-inappbrowser": {
-      "PACKAGE_NAME": "com.phonegap.helloworld"
-    },
     "cordova-plugin-network-information": {
       "PACKAGE_NAME": "com.phonegap.helloworld"
     },
-    "cordova-android-support-gradle-release": {
-      "ANDROID_SUPPORT_VERSION": "27.+",
-      "PACKAGE_NAME": "com.phonegap.helloworld"
-    },
-    "cordova-plugin-crosswalk-webview": {
-      "XWALK_VERSION": "23+",
-      "XWALK_LITEVERSION": "xwalk_core_library_canary:17+",
-      "XWALK_COMMANDLINE": "--disable-pull-to-refresh-effect",
-      "XWALK_MODE": "embedded",
-      "XWALK_MULTIPLEAPK": "true",
+    "cordova-plugin-vibration": {
       "PACKAGE_NAME": "com.phonegap.helloworld"
     }
   },
   "dependent_plugins": {
+    "cordova-plugin-compat": {
+      "PACKAGE_NAME": "com.phonegap.helloworld"
+    },
     "cordova-plugin-file": {
       "PACKAGE_NAME": "com.phonegap.helloworld"
     }
