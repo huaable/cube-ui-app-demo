@@ -11,6 +11,11 @@
     npm run build 
 
 
+    chromedriver无法下载试试下面
+
+    npm install chromedriver --chromedriver_cdnurl=http://cdn.npm.taobao.org/dist/chromedriver
+
+
 #### 开发流程
 
 1.在vue_project目录里进行vue项目开发
