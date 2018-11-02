@@ -42,23 +42,19 @@
           <!-- 推荐 -->
           <cube-slide-item>
 
-            <div style="padding: 8px">
-                <router-link to='/example'>
-                  <cube-button>example page</cube-button>
-                </router-link>
-                <br>
-
-                <router-link to='/example/view'>
-                  <cube-button>example/view page</cube-button>
-                </router-link>
-
-                <br>
-                <router-link to='/other'>
-                  <cube-button>other page</cube-button>
-                </router-link>
-            </div>
-
             <cube-scroll :data="recommendData" :options="scrollOptions">
+
+                <div style="padding: 8px">
+                    <router-link to='/example'>
+                        <cube-button>example page</cube-button>
+                    </router-link>
+                    <br>
+
+                    <router-link to='/other'>
+                        <cube-button>other page</cube-button>
+                    </router-link>
+                </div>
+
               <ul class="list-wrapper">
                 <li v-for="(item, index) in recommendData" class="list-item" :key="index">
                   <div class="top is-black is-bold line-height">
@@ -96,7 +92,7 @@
   import CubePage from './components/cube-page.vue'
   import CubeView from './components/cube-view.vue'
 
-  import {FOLLOWERS_DATA, RECOMMEND_DATA, HOT_DATA} from './data/tab-bar'
+  // import {FOLLOWERS_DATA, RECOMMEND_DATA, HOT_DATA} from './data/tab-bar'
   import {findIndex} from './common/helpers/util'
 
   export default {
@@ -124,10 +120,44 @@
           /* lock x-direction when scrolling horizontally and  vertically at the same time */
           directionLockThreshold: 0
         },
-        followersData: FOLLOWERS_DATA,
-        recommendData: RECOMMEND_DATA,
-        hotData: HOT_DATA
+        // followersData: FOLLOWERS_DATA,
+        // recommendData: RECOMMEND_DATA,
+        // hotData: HOT_DATA
+		  followersData: [],
+		  recommendData: [],
+		  hotData: []
       }
+    },
+	  mounted: function () {
+		  let that = this;
+
+		  //服务器已经开启跨域请求
+
+          //关注数据
+		  this.$http.get('http://dump123.cn/apix/followers', {}).then(function (response) {
+			  that.followersData = response.data
+
+		  }, function (response) {
+			  // 发生错误
+		  });
+
+		  //推荐数据
+		  this.$http.get('http://dump123.cn/apix/recommends', {}).then(function (response) {
+			  that.recommendData = response.data
+
+		  }, function (response) {
+			  // 发生错误
+		  });
+
+		  //热榜数据
+		  this.$http.get('http://dump123.cn/apix/hots', {}).then(function (response) {
+			  that.hotData = response.data
+
+		  }, function (response) {
+			  // 发生错误
+		  });
+
+
     },
     methods: {
       changePage (current) {

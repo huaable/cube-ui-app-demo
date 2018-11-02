@@ -1,6 +1,7 @@
 // The Vue build version to load with the `import` command
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import VueResource from 'vue-resource'
 import Cube from 'cube-ui'
 import App from './App.vue'
 import router from './router'
@@ -14,6 +15,7 @@ FastClick.attach(document.body) //  hack the active pseudo-classes failure cause
 
 Vue.use(Cube)
 Vue.use(VueRouter)
+Vue.use(VueResource)
 Vue.use(VueLazyload)
 
 new Vue({
