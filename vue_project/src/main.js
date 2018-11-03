@@ -8,6 +8,9 @@ import router from './router'
 import FastClick from 'fastclick'
 import VueLazyload from 'vue-lazyload'
 
+import axios from 'axios';
+Vue.prototype.$http= axios
+
 
 window.Promise = window.Promise || Promise
 

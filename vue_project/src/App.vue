@@ -49,7 +49,6 @@
                         <cube-button>example page</cube-button>
                     </router-link>
                     <br>
-
                     <router-link to='/other'>
                         <cube-button>other page</cube-button>
                     </router-link>
@@ -64,6 +63,7 @@
                   <div>{{resolveQuestionFollowers(item)}}</div>
                 </li>
               </ul>
+
             </cube-scroll>
           </cube-slide-item>
           <cube-slide-item>
@@ -100,6 +100,7 @@
       return {
         selectedLabel: '推荐',
         disabled: false,
+        debut: [],
         tabLabels: [{
           label: '关注'
         }, {
@@ -133,20 +134,39 @@
 
 		  //服务器已经开启跨域请求
 
-          //关注数据
+/*
+		  this.$http({
+			  method: 'get',
+			  url: 'http://dump123.cn/apix/followers',
+			  data: {
+				  // name: 'virus'
+			  }
+		  }).then(function (response) {
+              alert(response.data)
+		  },function(){
+		    alert('error:http://dump123.cn/apix/followers')
+		  })
+*/
+
+
+
+		  //关注数据
 		  this.$http.get('http://dump123.cn/apix/followers', {}).then(function (response) {
 			  that.followersData = response.data
-
 		  }, function (response) {
 			  // 发生错误
+              alert('error:http://dump123.cn/apix/followers---'+response.data)
 		  });
 
 		  //推荐数据
 		  this.$http.get('http://dump123.cn/apix/recommends', {}).then(function (response) {
 			  that.recommendData = response.data
-
 		  }, function (response) {
 			  // 发生错误
+			  alert('error:http://dump123.cn/apix/recommends---'+response.data)
+              for (var index in response) {
+              	alert(index+':'+response[index])
+              }
 		  });
 
 		  //热榜数据
@@ -155,6 +175,10 @@
 
 		  }, function (response) {
 			  // 发生错误
+			  alert('error:http://dump123.cn/apix/hots---'+response)
+			  for (var index in response) {
+				  alert(index+':'+response[index])
+			  }
 		  });
 
 
