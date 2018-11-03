@@ -18,6 +18,10 @@
 
 #### 开发流程
 
+
+vue_project ---> www ---> cordova
+
+
 1.在vue_project目录里进行vue项目开发
     
      cd /cube-ui-app-demo/vue_project
@@ -25,14 +29,15 @@
      #开发调试网页时使用,修改vue工程并保存后,浏览器会自动刷新即时显示网页
      npm run dev 
 
-2.在vue_project目录里,通过 npm run build 命令生成 phonegap 需要的app网站代码
-(npm run build 生成的网页代码在这 cube-ui-app-demo/www )
+2.在vue_project目录里,生成网页代码( 生成的网页代码在这 cube-ui-app-demo/www )
     
      cd /cube-ui-app-demo/vue_project
      npm run build
 
 
-3.再之后就是 phonegap 相关操作了。将 /cube-ui-app-demo/www 网页代码生成为各平台项目工程,存储在/cube-ui-app-demo/platforms 里
+3.再之后就是 cordova (phonegap) 相关操作了。
+
+将 /cube-ui-app-demo/www 网页代码生成为各平台项目工程（生成的各平台的项目工程存储在/cube-ui-app-demo/platforms 里）
 
      cd /cube-ui-app-demo
 
